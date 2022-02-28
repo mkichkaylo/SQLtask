@@ -1,0 +1,27 @@
+10. 
+select model, price
+from printer
+where price = (select max(price) 
+ from printer)
+
+11
+select avg (speed)
+from pc
+
+12
+select avg (speed)
+from laptop
+where price > 1000
+
+13
+select avg (speed)
+from pc
+inner join 
+product on pc.model = product.model
+where product.maker = 'A'
+
+14
+select ships.class, ships.name, classes.country
+from ships inner join
+classes on ships.class=classes.class
+where numguns >= 10
